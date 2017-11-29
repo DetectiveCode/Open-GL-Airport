@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6E6E9821-6EB0-407F-8AFC-234AF8E7A140}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IMAT2902_Ex02</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>OpenGL_Airport</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./headers;./gl;$(IncludePath)</IncludePath>
+    <LibraryPath>./gl;$(LibraryPath)</LibraryPath>
+    <SourcePath>./src;$(SourcePath)</SourcePath>
+    <OutDir>bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>./headers;./gl;$(IncludePath)</IncludePath>
+    <LibraryPath>./gl;$(LibraryPath)</LibraryPath>
+    <SourcePath>./src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\Camera.h" />
+    <ClInclude Include="headers\Main.h" />
+    <ClInclude Include="headers\ModelHandler.h" />
+    <ClInclude Include="headers\ModelProperties.h" />
+    <ClInclude Include="headers\WinMain.h" />
+    <ClInclude Include="headers\Log.h" />
+    <ClInclude Include="headers\MathFunc.h" />
+    <ClInclude Include="headers\Model.h" />
+    <ClInclude Include="headers\ModelLoader.h" />
+    <ClInclude Include="headers\Resource.h" />
+    <ClInclude Include="headers\stdafx.h" />
+    <ClInclude Include="headers\targetver.h" />
+    <ClInclude Include="headers\TextureLoader.h" />
+    <ClInclude Include="headers\Win32OpenGL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\ModelHandler.cpp" />
+    <ClCompile Include="src\WinMain.cpp" />
+    <ClCompile Include="src\Log.cpp" />
+    <ClCompile Include="src\MathFunc.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\ModelLoader.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\TextureLoader.cpp" />
+    <ClCompile Include="src\Win32OpenGL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

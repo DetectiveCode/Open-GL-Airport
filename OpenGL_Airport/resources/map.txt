@@ -1,0 +1,17 @@
+#Model Texture xAngle yAngle zAngle xTranslate yTranslate zTranslate xScale yScale zScale
+
+skybox.obj skybox1.bmp 0 0 0 0 0 0 99000 99000 99000
+ground.obj ground.bmp 0 0 0 0 0 0 1 1 1
+concrete.obj concrete.bmp 0 0 0 0 0 0 1 1 1
+concrete.obj concrete.bmp 0 180 0 -83 0 157.35 1 1 1
+runway-ground.obj runway-ground.bmp 0 0 0 0 0 0 1 1 1
+runway-markings.obj runway-markings.bmp 0 0 0 0 0 0 1 1 1
+control-tower.obj control-tower.bmp 0 0 0 0 0 0 1 1 1
+myhangar.obj myhangar.bmp 0 90 0 90.5 -0.01 145 1 1 1
+hangar.obj hangar.bmp 0 0 0 0 0 0 1 1 1
+airplaneone.obj airplaneone.bmp 0 90 0 -60 0 0 3 3 3
+airplaneone.obj airplaneone.bmp 0 150 0 -20 0 60 3 3 3
+airplanetwo.obj airplanetwo.bmp 0 0 0 -70 0 -5 3 3 3
+airplanetwo.obj airplanetwo.bmp 0 130 0 10 0 60 3 3 3
+P51.obj P51.bmp 0 50 0 -10 0 0 3 3 3
+building.obj building.bmp 0 0 0 0 0 0 1 1 1
