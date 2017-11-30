@@ -142,7 +142,7 @@ void Main::ComputeProjectionMatrix()
 	#define ONE_DEG_IN_RAD (2.0 * M_PI) / 360.0 // 0.017444444
 
 	// input variables
-	float zNear = 0.1f;	// Near clipping plane
+	float zNear = 1.0f;	// Near clipping plane - 0.1f does not work on AMD cards apparently.
 	float zFar = 100000.0f;	// Far clipping plane
 	float fov = static_cast<float>(67.0f * ONE_DEG_IN_RAD); // convert 67 degrees to radians
 
